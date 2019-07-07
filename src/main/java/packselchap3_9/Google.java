@@ -18,14 +18,14 @@ public class Google {
         driver.get(baseURL + "?gws_rd=cr,ssl&ei=qZlNVpOUMNCauQS0iYmoCA&fg=1");
         System.out.println(driver.getTitle());
 //<<<<<<< HEAD
-        if (!driver.getTitle().equals("Google-Selenium Testing Tools")){
+   //     if (!driver.getTitle().equals("Google-Selenium Testing Tools")){
 //=======
-        if (!driver.getTitle().equals("Google")){
+        if (!driver.getTitle().equals("Google-test")){
 //>>>>>>> 68fa745cb5b2607eeded53d187bddd54d183c832
             throw new WrongPageException("Incorrect page for Google Home page");
         }
     }
-    }
+  //  }
     public GoogleSearchPage goToSearchPage(){
         driver.findElement(By.name("q")).sendKeys("Mastering Selenium Testing Tools");
         driver.findElement(By.name("btnK")).click();
